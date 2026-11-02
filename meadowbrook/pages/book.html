@@ -1,0 +1,33 @@
+<h1>Book an appointment</h1>
+<p id="loading" class="muted">Loading…</p>
+<div id="book" class="grid-2" hidden>
+  <form id="bk-form" class="card" novalidate>
+    <div class="field"><label for="bk-doctor">Clinician</label><select id="bk-doctor"></select></div>
+    <div class="field-row">
+      <div class="field"><label for="bk-length">Appointment</label><select id="bk-length"><option value="15">Standard (15 minutes)</option><option value="30">Long (30 minutes)</option></select></div>
+      <div class="field"><label for="bk-for">Who is it for?</label><select id="bk-for"></select></div>
+    </div>
+    <div class="field"><label for="bk-date">Day</label><input id="bk-date" type="date"></div>
+    <fieldset>
+      <legend>Free times</legend>
+      <div id="bk-times" class="times"></div>
+      <p id="bk-note" class="hint" role="status" aria-live="polite"></p>
+    </fieldset>
+    <div class="field"><label for="bk-reason">What's it about? (optional)</label><textarea id="bk-reason" rows="2" maxlength="300"></textarea></div>
+    <p id="bk-msg" class="msg" role="status"></p>
+    <button type="submit" class="btn">Book</button>
+  </form>
+  <div class="stack">
+    <section id="bk-done" class="card done" hidden></section>
+    <section class="card">
+      <h2>Before you book</h2>
+      <ul class="list small">
+        <li>Online booking is open from tomorrow up to 28 days ahead.</li>
+        <li>Standard appointments are 15 minutes, long ones 30 minutes.</li>
+        <li>Open Monday to Friday, 08:00 to 18:00; closed 12:30 to 13:30 for lunch.</li>
+      </ul>
+      <h3>Closed days</h3>
+      <ul id="bk-closed" class="list small"></ul>
+    </section>
+  </div>
+</div>

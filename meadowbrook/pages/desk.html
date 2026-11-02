@@ -1,0 +1,41 @@
+<div class="section-head desk-head">
+  <h1>Reception desk</h1>
+  <div class="field inline"><label for="dk-date">Day</label><input id="dk-date" type="date"></div>
+</div>
+<p id="dk-day" class="muted"></p>
+<div class="tiles" id="dk-counts"></div>
+<div class="table-wrap">
+  <table class="table dk-table" aria-label="Day list">
+    <thead><tr><th>Time</th><th>Clinician</th><th>Patient</th><th>Reason</th><th>Status</th><th></th></tr></thead>
+    <tbody id="dk-rows"><tr><td colspan="6" class="muted">Loading…</td></tr></tbody>
+  </table>
+</div>
+<p id="dk-msg" class="msg" role="status"></p>
+<p><a id="dk-csv" href="/api/desk/day.csv">Download the day list (CSV)</a> <span class="muted small">Everyone still booked on this day.</span></p>
+<div class="section grid-2">
+  <section class="card">
+    <form id="bl-form" novalidate>
+      <h2>Keep a time free</h2>
+      <p class="muted small">Blocked times can't be booked online. Use them for emergencies and call-backs.</p>
+      <div class="field"><label for="bl-doctor">Clinician</label><select id="bl-doctor"></select></div>
+      <div class="field-row">
+        <div class="field"><label for="bl-date">Day</label><input id="bl-date" type="date"></div>
+        <div class="field"><label for="bl-time">Time</label><select id="bl-time"></select></div>
+      </div>
+      <div class="field"><label for="bl-reason">Why</label><input id="bl-reason" maxlength="120" autocomplete="off" placeholder="e.g. Emergency slot"></div>
+      <p id="bl-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Block this time</button>
+    </form>
+    <h3 class="section-sm">Blocked times</h3>
+    <ul id="bl-list" class="block-list"></ul>
+  </section>
+  <section class="card">
+    <form id="pt-form" class="row" novalidate role="search">
+      <label class="sr-only" for="pt-q">Patient's name</label>
+      <input id="pt-q" type="search" placeholder="Find a patient by name" autocomplete="off">
+      <button type="submit" class="btn">Find</button>
+    </form>
+    <p id="pt-msg" class="msg" role="status"></p>
+    <div id="pt-list" class="patient-list"></div>
+  </section>
+</div>

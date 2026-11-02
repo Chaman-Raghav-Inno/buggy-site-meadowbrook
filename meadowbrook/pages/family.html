@@ -1,0 +1,15 @@
+<h1>Family</h1>
+<div class="grid-2">
+  <section class="card"><h2>Your children</h2><ul id="fm-list" class="family-list"><li class="muted">Loading…</li></ul></section>
+  <form id="fm-form" class="card" novalidate>
+    <h2>Add a child</h2>
+    <p class="muted small">Children under 16 can be added to your account. Anyone 16 or over registers for their own account.</p>
+    <div class="field"><label for="fm-name">Full name</label><input id="fm-name" maxlength="80" autocomplete="off"></div>
+    <div class="field-row">
+      <div class="field"><label for="fm-dob">Date of birth</label><input id="fm-dob" type="date"></div>
+      <div class="field"><label for="fm-nhs">NHS number</label><input id="fm-nhs" inputmode="numeric" maxlength="12" autocomplete="off"></div>
+    </div>
+    <p id="fm-msg" class="msg" role="status"></p>
+    <button type="submit" class="btn">Add child</button>
+  </form>
+</div>
