@@ -1,0 +1,17 @@
+<h1>Messages</h1>
+<div class="grid-2">
+  <section class="card">
+    <h2>Your conversations</h2>
+    <ul id="ms-list" class="thread-list"><li class="muted">Loading…</li></ul>
+    <div id="ms-thread" class="thread" hidden></div>
+  </section>
+  <form id="ms-form" class="card" novalidate>
+    <h2>Message the practice</h2>
+    <p class="notice small">Not for emergencies. If it's urgent, call 999, or 111 when we're closed.</p>
+    <div class="field"><label for="ms-topic">Topic</label><select id="ms-topic"></select></div>
+    <div class="field"><label for="ms-subject">Subject</label><input id="ms-subject" maxlength="120" autocomplete="off"></div>
+    <div class="field"><label for="ms-text">Message</label><textarea id="ms-text" rows="6" maxlength="1000"></textarea><p class="hint" id="ms-count">0 / 1000</p></div>
+    <p id="ms-msg" class="msg" role="status"></p>
+    <button type="submit" class="btn">Send</button>
+  </form>
+</div>

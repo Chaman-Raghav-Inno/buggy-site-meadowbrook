@@ -1,0 +1,23 @@
+<h1>Repeat prescriptions</h1>
+<div class="grid-2">
+  <section class="card"><h2>Your repeat medicines</h2><ul id="rx-meds" class="med-list"><li class="muted">Loading…</li></ul></section>
+  <form id="rx-form" class="card" novalidate>
+    <h2>Order a medicine</h2>
+    <div class="field"><label for="rx-medicine">Medicine</label><select id="rx-medicine"></select></div>
+    <div class="field-row">
+      <div class="field"><label for="rx-qty">How many</label><input id="rx-qty" type="number" min="1" step="1" inputmode="numeric"><p class="hint" id="rx-max"></p></div>
+      <div class="field"><label for="rx-pharmacy">Collect from</label><select id="rx-pharmacy"></select></div>
+    </div>
+    <p id="rx-msg" class="msg" role="status"></p>
+    <button type="submit" class="btn">Send request</button>
+  </form>
+</div>
+<section class="section">
+  <h2>Your requests</h2>
+  <div class="table-wrap">
+    <table class="table" aria-label="Prescription requests">
+      <thead><tr><th>Medicine</th><th class="num">Quantity</th><th>Requested</th><th>Ready to collect</th><th>Collect from</th><th>Status</th></tr></thead>
+      <tbody id="rx-history"></tbody>
+    </table>
+  </div>
+</section>

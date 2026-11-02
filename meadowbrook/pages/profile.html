@@ -1,0 +1,22 @@
+<h1>Your details</h1>
+<div class="grid-2">
+  <form id="pf-form" class="card" novalidate>
+    <div class="field"><label for="pf-name">Name</label><input id="pf-name" readonly><p class="hint">To change your name, bring ID to reception.</p></div>
+    <div class="field-row">
+      <div class="field"><label for="pf-dob">Date of birth</label><input id="pf-dob" type="date"></div>
+      <div class="field"><label for="pf-nhs">NHS number</label><input id="pf-nhs" inputmode="numeric" maxlength="12" autocomplete="off"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label for="pf-phone">Phone</label><input id="pf-phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="pf-email">Email</label><input id="pf-email" type="email" autocomplete="email"></div>
+    </div>
+    <p id="pf-msg" class="msg" role="status"></p>
+    <button type="submit" class="btn">Save</button>
+  </form>
+  <section class="card">
+    <h2>Fees</h2>
+    <p class="big" id="pf-owed">–</p>
+    <ul id="pf-fees" class="list small"></ul>
+    <p class="hint">Cancelling on the day of an appointment costs £15. Pay at reception.</p>
+  </section>
+</div>
